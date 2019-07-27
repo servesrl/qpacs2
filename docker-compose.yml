@@ -114,8 +114,8 @@ services:
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
       - '--storage.tsdb.path=/prometheus'
-      - '--web.external-url=https://localhost:8443/prometheus'
-      - '--web.route-prefix=/'
+      - '--web.external-url=https://localhost:8443/graph'
+     # - '--web.route-prefix=/'
  #     - '--web.console.libraries=/usr/share/prometheus/console_libraries'
  #     - '--web.console.templates=/usr/share/prometheus/consoles'
 #    ports:
@@ -125,6 +125,7 @@ services:
 #      - alertmanager:alertmanager
     depends_on:
       - orthanc
+      - nginx
     networks:
       - frontend
       - backend

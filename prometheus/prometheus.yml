@@ -7,4 +7,7 @@ scrape_configs:
       password: serveritegno
     static_configs:
       - targets: ['192.168.30.59:8443']
-
+    tls_config:
+      cert_file: /etc/ssl/SSL.crt
+      key_file: /etc/ssl/SSL.key
+      insecure_skip_verify: true
