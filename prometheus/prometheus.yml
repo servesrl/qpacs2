@@ -1,13 +1,18 @@
+global:
+  scrape_interval:     15s # By default, scrape targets every 15 seconds.
+  evaluation_interval: 15s # By default, scrape targets every 15 seconds.
+
 scrape_configs:
-  - job_name: 'qpacs2'
-    scrape_interval: 10s
-    metrics_path: /orthanc/tools/metrics-prometheus
-    basic_auth:
+   - job_name: 'orthanc'
+     scrape_interval: 10s
+     metrics_path: /tools/metrics-prometheus
+     static_configs:
+       - targets: ['orthanc:8042']
+     basic_auth:
       username: serve
       password: serveritegno
-    static_configs:
-      - targets: ['192.168.30.59:8443']
-    tls_config:
-      cert_file: /etc/ssl/SSL.crt
-      key_file: /etc/ssl/SSL.key
-      insecure_skip_verify: true
+   - job_name:  'cadvisor/node-exporter'
+     scrape_interval:     5s # By default, scrape targets every 15 seconds.
+     static_configs:
+      - targets: ['cadvisor:8080','node-exporter:9100']
+ 

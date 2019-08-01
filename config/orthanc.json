@@ -408,7 +408,7 @@
   // seconds of inactivity to wait before automatically closing a
   // DICOM association used by Lua. If set to 0, the connection is
   // closed immediately.
-  "DicomAssociationCloseDelay" : 5,
+  "DicomAssociationCloseDelay" : 0,
 
   // Maximum number of query/retrieve DICOM requests that are
   // maintained by Orthanc. The least recently used requests get
