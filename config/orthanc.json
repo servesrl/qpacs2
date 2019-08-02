@@ -187,7 +187,7 @@
     // "sample" : [ "STORESCP", "127.0.0.1", 2000 ]
     "MR3T" : ["MR_3T", "192.168.30.39", 3010],
     "SERVEPACS": ["SERVEPACS", "192.168.30.170", 11112],
-    "ohif" : [ "OHIFDCM", "viewer", 3000 ]
+    "ohif" : [ "OHIFDCM", "viewer", 3002 ]
 
     /**
      * A fourth parameter is available to enable patches for

@@ -1,0 +1,1 @@
+python ImportDicomFiles.py 192.168.30.59 8042 /media/NAS12/test/3T180002\ DOLCI\ LORENZO/ serve serveritegno
